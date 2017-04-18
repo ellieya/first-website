@@ -1,0 +1,2 @@
+March 31st 2017: Added Mobile Response
+April 7th 2017: Replaced stars with HTML entity code

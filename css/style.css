@@ -1,0 +1,18 @@
+@font-face {
+    font-family:ginga;
+    src: url(../fonts/ginga.ttf);
+}
+
+@font-face {
+    font-family:cgothic;
+    src: url(../fonts/centurygothic.ttf);
+}
+
+@font-face {
+    font-family:tv;
+    src: url(../fonts/tidycurveTV.ttf);
+}
+
+p .gray {
+    color:gray;
+}

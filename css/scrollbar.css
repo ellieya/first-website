@@ -1,0 +1,11 @@
+::-webkit-scrollbar{
+    width:7px;
+}
+::-webkit-scrollbar-thumb {
+    background:cyan;
+    background:linear-gradient(to bottom, transparent, cyan, fuchsia, cyan, transparent);
+}
+
+::-webkit-scrollbar-track {
+    background:gray;
+}

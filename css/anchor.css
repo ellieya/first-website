@@ -1,0 +1,110 @@
+#a-bar {
+    /* Style */
+    background-color:black;
+    border-top: 3px dashed white;
+    border-bottom: 3px dashed white;
+    /* Size */
+    width:100%;
+    height:50px;
+    /* Position */
+    position:fixed;
+    bottom:17px;
+    z-index:20;
+}
+#a-bar .a-txt {
+    /* Style */
+    color:white;
+    text-transform:lowercase;
+    font-weight:600;
+    font-size:45px;
+    font-family:tv;
+    /* Position */
+    position:absolute;
+    right:20px;
+    top:-10px;
+}
+#a-bar #a-txt-container-min {
+    display:none;
+    
+}
+
+#a-bar .tt-hover {
+    position:relative;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    margin-top:5px;
+    margin-right:12px;
+}
+
+/* I see now, when you assign position: absolute, you are capable of assigning the ancestor. For example, when you try to assign .tt-hover the ancestor of .tt-container, everything gets messed up. This is extremely important information for the future. Make note of it. */
+
+#a-bar #tt-container {
+    position:absolute;
+    display:block;
+    width:inherit;
+    height:inherit;
+    left:40px;
+}
+
+.tt-hover .a-marker {
+    /* style */
+    color:white;
+    background-color:hotpink;
+    font-size:10px;
+    border: 0.5px solid black;
+    /* Position */
+    position:absolute;
+    top:-3px;
+    left:-5px;
+    z-index:30;
+}
+
+.tt-hover img {
+    width:40px;
+    border-radius:25%;
+    position:absolute;
+    /* When using tooltips, it seems that hover stops working when the image is given a position. Use the tt container tt-hover as a means of adjusting image margins.
+    tt-hover will activate hover on any position.*/
+}
+
+.tt-hover .tt-show {
+    /* Style */
+    text-shadow: 0px 0px 5px black;
+    color:white;
+    font-weight:700;
+    padding:5px;
+    border: 4px aliceblue ridge;
+    border-radius:10%;
+    background:cyan;
+    background: repeating-linear-gradient(45deg, cyan, fuchsia);
+    text-align:center;
+    /* Size */
+    width:85px;
+    /* Position */
+    position:absolute;
+    bottom:122%;
+    left:50%;
+    z-index:30;
+    margin-left:-47px; /* 50% of border + width + padding */
+    /* In order to avoid conflicting with image, bottom property must be inserted below position property. */
+    /* Visibility */
+    visibility:hidden;
+}
+
+.tt-hover:hover .tt-show {
+    visibility:visible;
+}
+
+.tt-hover:hover img {
+    box-shadow: 0px 0px 15px aliceblue;
+}
+@media screen and (max-width:700px) {
+    #a-bar #a-txt-container-min {
+        display:block;
+    }
+    #a-bar #a-txt-container {
+        display:none;
+    }
+    
+}
